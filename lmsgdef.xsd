@@ -1,0 +1,107 @@
+<?xml version = "1.0" encoding = "UTF-8" standalone = "yes"?>
+
+<xs:schema xmlns:xs = "http://www.w3.org/2001/XMLSchema" elementFormDefault = "qualified">
+
+
+	<xs:annotation>
+		<xs:documentation xml:lang= "es-es"></xs:documentation>
+			<fechaCreacion> 2022</fechaCreacion>
+			<autor> Alejandro Gomez cruz</autor>
+			<utilidad>factura</utilidad>
+			<?xml version="1.0" encoding="UTF-8"?>
+
+            
+            <?xml version="1.0" encoding="UTF-8"?>
+            <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            
+              <xs:element name="factura">
+                <xs:complexType>
+                  <xs:all>
+            
+                    <xs:element name="clinica">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:group ref="datos empresa "/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+            
+                    <xs:element name="fdsafdas fdsafda, fdasfdsa(paciente)">
+               <xs:complexType>
+                        <xs:sequence>
+                          <xs:group ref="observaciones"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+            
+                    <xs:element name="detalle-factura">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="linea" maxOccurs="15">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:group ref="datosLinea"/>
+                              </xs:sequence>
+                              <xs:attributeGroup ref="atributosLinea"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="importe" type="tipoPrecio"
+                         use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                </xs:all>
+                <xs:attributeGroup ref="atributosFactura"/>
+              </xs:complexType>
+            </xs:element>
+
+            <xs:element name="plan de prueba ">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:group ref="pendiente extraccion dontaria simple"/>
+                              </xs:sequence>
+
+
+                                <xs:group name="datosEmpresa">
+                                <xs:sequence>
+                                  <xs:element name="nombre" />
+                                  <xs:element name="cif">
+                                    <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{8}-[A-Z]"/>
+                                      </xs:restriction>
+                                    </xs:simpleType>
+                                  </xs:element>
+                                  <xs:element name="teléfono">
+                                    <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{9}"/>
+                                      </xs:restriction>
+                                    </xs:simpleType>
+                                  </xs:element>
+                                </xs:sequence>
+
+                                <xs:element name="localizacion">
+                                    <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{9}"/>
+                                      </xs:restriction>
+                                    </xs:simpleType>
+                                  </xs:element>
+                                </xs:sequence>
+                              </xs:group>
+
+
+                              <xs:attributeGroup name="atributosFactura">
+                                <xs:attribute name="número" type="xs:positiveInteger"
+                                 use="required"/>
+                                <xs:attribute name="fecha" type="xs:date" use="required"/>
+                                <xs:attribute name="precio " fixed="Euro"/>
+                                <xs:attribute name="descuento " fixed="Euro"/>
+                                <xs:attribute name="iva " fixed="Euro"/>
+                                <xs:attribute name="retencion  " fixed="Euro"/>
+                                <xs:attribute name="total " fixed="Euro"/>
+                              </xs:attributeGroup>
+  </xs:simpleType>
+              
+            </xs:schema>
